@@ -1,319 +1,144 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', Arial, sans-serif;
-}
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', Arial, sans-serif;
+  }
 
 body {
-    background-color: #f8f9fa; /* 🎨 Background Color */
-    color: #202124; /* 🎨 Text Color */
-    overflow-x: hidden;
+background-color: #f8f9fa;
+color: #202124;
+overflow-x: hidden;
 }
 
-/* 🚀 Splash Screen */
+/* Splash Screen */
 .splash-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1000;
+opacity: 0;
+visibility: hidden;
+transition: opacity 0.3s ease;
 }
 
 .splash-screen.active {
-    opacity: 1;
-    visibility: visible;
+opacity: 1;
+visibility: visible;
 }
 
 .splash-content {
-    text-align: center;
+text-align: center;
 }
 
 .splash-content .logo {
-    width: 100px;
-    margin-bottom: 20px;
+width: 100px;
+margin-bottom: 20px;
 }
 
-.splash-content h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-    color: #4285f4;
-}
-
-.splash-content p {
-    color: #5f6368;
-    font-size: 16px;
-}
-
-/* 🔐 Login Page */
+/* Login */
 .login-page {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f8f9fa;
-    display: none;
+height: 100vh;
+display: none;
+justify-content: center;
+align-items: center;
 }
 
 .login-container {
-    background-color: white;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 400px;
+background: white;
+padding: 40px;
+border-radius: 8px;
+width: 400px;
+box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+text-align: center;
 }
 
-.login-container .logo {
-    width: 70px;
-    margin-bottom: 20px;
-}
-
-.login-container h1 {
-    font-size: 24px;
-    margin-bottom: 30px;
-    color: #202124;
-}
-
-.login-form input {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #dadce0;
-    border-radius: 4px;
-    font-size: 16px;
-}
-
-.login-btn {
-    background-color: #4285f4; /* 🔵 Login Button */
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    width: 100%;
-    margin-top: 10px;
-}
-
-.create-account {
-    margin-top: 20px;
-    color: #5f6368;
-}
-
-.create-account a {
-    color: #4285f4;
-    text-decoration: none;
-}
-
-/* 📁 Drive Page */
+/* Drive Page */
 .drive-page {
-    display: none;
-    height: 100vh;
-    overflow: hidden;
+display: none;
+height: 100vh;
 }
 
+/* Header */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: white;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+display: flex;
+justify-content: space-between;
+align-items: center;
+height: 60px;
+padding: 0 20px;
+background: white;
 }
 
-/* 🔍 Search Bar */
-.search-bar {
-    flex: 1;
-    max-width: 700px;
-    margin: 0 20px;
-    display: flex;
-    align-items: center;
-    background-color: #f1f3f4;
-    border-radius: 8px;
-    padding: 8px 16px;
+.header-left {
+display: flex;
+align-items: center;
+gap: 10px;
 }
 
-.search-bar i {
-    color: #5f6368;
-    margin-right: 10px;
+.logo-small {
+width: 30px;
 }
 
-.search-bar input {
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    width: 100%;
+/* Main Layout */
+.main-content {
+display: flex;
+height: calc(100vh - 60px);
 }
 
-/* 📌 Sidebar */
+/* Sidebar */
 .sidebar {
-    width: 260px;
-    background-color: white;
-    padding: 20px;
-    height: 100%;
-    border-right: 1px solid #dadce0;
+width: 250px;
+background: white;
+padding: 20px;
+border-right: 1px solid #ddd;
 }
 
-/* ➕ New Button */
-.new-btn {
-    background-color: #fff;
-    color: #3c4043;
-    border: 1px solid #dadce0;
-    padding: 12px 24px;
-    border-radius: 24px;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Content */
+.content {
+flex: 1;
+padding: 20px;
+overflow-y: auto;
 }
 
-.new-btn i {
-    margin-right: 10px;
+/* Files Grid */
+.files-container {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+gap: 20px;
 }
 
-/* 🗂️ Navigation Links */
-.nav-links {
-    list-style: none;
-}
-
-.nav-links li {
-    padding: 12px 10px;
-    border-radius: 24px;
-    margin-bottom: 5px;
-    font-size: 14px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-}
-
-.nav-links li i {
-    margin-right: 10px;
-    width: 20px;
-}
-
-.nav-links li.active {
-    background-color: #e8f0fe;
-    color: #1a73e8;
-}
-
-.nav-links li:hover {
-    background-color: #f1f3f4;
-}
-
-/* 📦 Storage Info */
-.storage-info {
-    position: absolute;
-    bottom: 20px;
-    width: 220px;
-}
-
-.storage-info p {
-    font-size: 13px;
-    color: #5f6368;
-    margin-bottom: 8px;
-}
-
-.progress-bar {
-    width: 100%;
-    height: 4px;
-    background-color: #e0e0e0;
-    border-radius: 2px;
-    overflow: hidden;
-}
-
-.progress {
-    height: 100%;
-    background-color: #4285f4;
-}
-
-/* 🖼️ File Upload Area */
+/* Upload Box */
 .file-upload-area {
-    border: 2px dashed #dadce0;
-    border-radius: 8px;
-    padding: 40px;
-    text-align: center;
-    margin-bottom: 30px;
-    cursor: pointer;
-    display: none;
+border: 2px dashed #dadce0;
+padding: 40px;
+text-align: center;
+margin-bottom: 20px;
 }
 
-.upload-box i {
-    font-size: 48px;
-    color: #4285f4;
-    margin-bottom: 16px;
+/* Buttons */
+.login-btn {
+background: #4285f4;
+color: white;
+border: none;
+padding: 12px;
+width: 100%;
+cursor: pointer;
 }
 
-.upload-box h3 {
-    font-size: 20px;
-    margin-bottom: 8px;
-}
-
-.upload-box p {
-    color: #5f6368;
-}
-
-/* 📄 File Cards */
-.file-card {
-    background-color: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: box-shadow 0.2s ease;
-}
-
-.file-card:hover {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-.file-thumbnail {
-    height: 140px;
-    overflow: hidden;
-    background-color: #f8f9fa;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.file-thumbnail i {
-    font-size: 48px;
-    color: #4285f4;
-}
-
-/* 🔔 Toast Notification */
+/* Toast */
 .toast {
-    position: fixed;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #323232;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 4px;
-    font-size: 14px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease;
-    z-index: 1000;
-}
-
-.toast.show {
-    opacity: 1;
-    visibility: visible;
+position: fixed;
+bottom: 20px;
+left: 50%;
+transform: translateX(-50%);
+background: black;
+color: white;
+padding: 10px 20px;
+border-radius: 4px;
 }
